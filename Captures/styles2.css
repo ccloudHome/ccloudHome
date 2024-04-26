@@ -1,0 +1,92 @@
+/* Stylesheet for enhanced styling */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Adding a default text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    text-align: center;
+    color: #3498db; /* Changing the title color */
+    font-size: 42px; /* Increasing the title font size */
+    margin-bottom: 20px; /* Adjusting the margin */
+    border-bottom: 3px solid #3498db; /* Making the underline thicker */
+    padding-bottom: 10px;
+}
+
+.intro p {
+    text-align: center;
+    color: #555; /* Adjusting the intro text color */
+    font-size: 20px; /* Increasing the intro text font size */
+    line-height: 1.6; /* Adjusting the line height */
+}
+
+.module-select select {
+    padding: 12px;
+    font-size: 18px; /* Increasing the font size for select options */
+    border: 2px solid #3498db; /* Making the border thicker */
+    border-radius: 8px; /* Increasing the border radius */
+    background-color: #f5f5f5; /* Slightly changing the background color */
+    width: 100%;
+    max-width: 320px; /* Slightly increasing the max-width */
+}
+
+.module-content h2 {
+    text-align: center;
+    color: #3498db; /* Changing the module title color */
+    font-size: 28px; /* Increasing the module title font size */
+    margin-bottom: 30px; /* Adjusting the margin */
+    border-top: 3px solid #3498db; /* Making the top border thicker */
+    border-bottom: 3px solid #3498db; /* Making the bottom border thicker */
+    padding: 15px 0; /* Adjusting the padding */
+}
+
+.link-list a {
+    display: inline-block; /* Changing to inline-block for better alignment */
+    padding: 15px 30px; /* Increasing the padding */
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px; /* Increasing the border radius */
+    margin-bottom: 15px; /* Adjusting the margin */
+    text-align: center;
+    transition: background-color 0.3s; /* Adding a smooth transition */
+}
+
+.link-list a:hover {
+    background-color: #2980b9; /* Darkening the color on hover */
+}
+
+.quiz-form input[type="submit"] {
+    padding: 15px 30px; /* Increasing the padding */
+    font-size: 18px; /* Increasing the font size */
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Increasing the border radius */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Adding a smooth transition */
+}
+
+.quiz-form input[type="submit"]:hover {
+    background-color: #2980b9; /* Darkening the color on hover */
+}
+
+.result {
+    text-align: center;
+    margin-top: 30px; /* Adjusting the margin */
+    font-size: 20px; /* Increasing the font size */
+    color: #3498db; /* Changing the result text color */
+}

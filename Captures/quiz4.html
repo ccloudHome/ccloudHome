@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+	<link rel="stylesheet" href="styles2.css">
+
+</head>
+<body>
+    <h1>Quiz 4: Real World Examples</h1>
+    <p>Please answer the following questions:</p>
+
+    <form id="quizForm">
+        <div>
+            <label for="q1">Question 1: What is a common goal of phishing attacks? </label><br>
+            <input type="radio" name="q1" value="a"> To spread viruses to as many computers as possible <br>
+            <input type="radio" name="q1" value="b"> To trick individuals into divulging sensitive information or credentials<br>
+            <input type="radio" name="q1" value="c"> To promote legitimate products and services <br>
+            <input type="radio" name="q1" value="d"> To increase social media followers <br>
+        </div>
+        <div>
+            <label for="q2">Question 2: True or False: Phishing attacks are always conducted via email.</label><br>
+            <input type="radio" name="q2" value="a"> True <br>
+            <input type="radio" name="q2" value="b"> False <br>
+        </div>
+        <div>
+            <label for="q3">Question 3: Which of the following is an example of a phishing attack? </label><br>
+            <input type="radio" name="q3" value="a"> A phone call from a legitimate company asking for personal information <br>
+            <input type="radio" name="q3" value="b"> An advertisement promoting a new product <br>
+			<input type="radio" name="q3" value="c"> An email pretending to be from a bank, asking the recipient to update their account information <br>
+            <input type="radio" name="q3" value="d"> Sending postcards to random individuals <br>
+        </div>
+		<div>
+            <label for="q4">Question 4: What can individuals do to protect themselves from phishing attacks? </label><br>
+            <input type="radio" name="q4" value="a"> Click on links in suspicious emails to investigate further <br>
+            <input type="radio" name="q4" value="b"> Share personal information freely online <br>
+            <input type="radio" name="q4" value="c"> Ignore email security warnings <br>
+            <input type="radio" name="q4" value="d"> Verify the authenticity of emails and avoid clicking on suspicious links <br>
+        </div>
+		<div>
+            <label for="q5">Question 5: Which of the following is NOT a real-world example of a phishing attack?</label><br>
+            <input type="radio" name="q5" value="a"> An email scam targeting a multinational corporation's executives <br>
+            <input type="radio" name="q5" value="b"> A phone call from a legitimate charity organization <br>
+			<input type="radio" name="q5" value="c"> A COVID-19 themed phishing campaign <br>
+            <input type="radio" name="q5" value="d"> A supply chain phishing attack targeting a multinational corporation's vendors <br>
+        </div>
+		<div>
+            <label for="q6">Question 6: True or False: Phishing attacks do not pose any risks to organizations. </label><br>
+            <input type="radio" name="q6" value="a"> True <br>
+            <input type="radio" name="q6" value="b"> False <br>
+        </div>
+		<div>
+            <label for="q7">Question 7: What is the primary goal of a Business Email Compromise (BEC) scam? </label><br>
+            <input type="radio" name="q7" value="a"> To spread malware <br>
+            <input type="radio" name="q7" value="b"> To trick employees into transferring funds or sensitive information <br>
+            <input type="radio" name="q7" value="c"> To promote fake products <br>
+            <input type="radio" name="q7" value="d"> To increase website traffic <br>
+        </div>
+		<div>
+            <label for="q8">Question 8: Which of the following is a common target of phishing attacks? </label><br>
+            <input type="radio" name="q8" value="a"> Only individuals <br>
+            <input type="radio" name="q8" value="b"> Only government agencies <br>
+            <input type="radio" name="q8" value="c"> Both individuals and organizations <br>
+            <input type="radio" name="q8" value="d"> Only celebrities <br>
+        </div>
+		<div>
+            <label for="q9">Question 9: What is a common tactic used in phishing attacks to deceive recipients? </label><br>
+            <input type="radio" name="q9" value="a"> Sending handwritten letters <br>
+            <input type="radio" name="q9" value="b"> Making video calls <br>
+            <input type="radio" name="q9" value="c"> Spoofing email addresses or websites <br>
+            <input type="radio" name="q9" value="d"> Sending gifts to random addresses <br>
+        </div>
+		<div>
+            <label for="q10">Question 10: True or False: Phishing attacks can lead to financial losses, identity theft, and unauthorized access to accounts. </label><br>
+            <input type="radio" name="q10" value="a"> True <br>
+            <input type="radio" name="q10" value="b"> False <br>
+        </div>
+		<div>
+            <label for="q11">Question 11: What should individuals do if they suspect they've received a phishing email? </label><br>
+            <input type="radio" name="q11" value="a"> Reply to the email and ask for more information <br>
+            <input type="radio" name="q11" value="b"> Click on the links provided to investigate further <br>
+			<input type="radio" name="q11" value="c"> Report the email as spam or phishing to their email provider <br>
+            <input type="radio" name="q11" value="d"> Forward the email to all their contacts <br>
+        </div>
+		<div>
+            <label for="q12">Question 12: What can organizations do to mitigate the risks of phishing attacks? </label><br>
+            <input type="radio" name="q12" value="a"> Ignore suspicious emails <br>
+            <input type="radio" name="q12" value="b"> Educate employees about phishing tactics and implement cybersecurity measures <br>
+			<input type="radio" name="q11" value="c"> Share sensitive information freely online <br>
+            <input type="radio" name="q11" value="d"> Disable email security features <br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var score = 0;
+            for (var pair of formData.entries()) {
+                if (pair[0] === 'q1' && pair[1] === 'b') { // Question 1: Correct answer is 'c'
+                    score++;
+                }
+                if (pair[0] === 'q2' && pair[1] === 'b') { // Question 2: Correct answer is 'c'
+                    score++;
+                }
+                if (pair[0] === 'q3' && pair[1] === 'c') { 
+                    score++;
+                }
+                if (pair[0] === 'q4' && pair[1] === 'd') { 
+                    score++;
+                }
+				if (pair[0] === 'q5' && pair[1] === 'b') { 
+                }
+                if (pair[0] === 'q6' && pair[1] === 'b') { 
+                    score++;
+                }
+				if (pair[0] === 'q7' && pair[1] === 'b') { 
+                    score++;
+                }
+                if (pair[0] === 'q8' && pair[1] === 'c') { 
+                    score++;
+                }
+				if (pair[0] === 'q9' && pair[1] === 'c') {
+                    score++;
+                }
+                if (pair[0] === 'q10' && pair[1] === 'a') { 
+                    score++;
+                }
+				if (pair[0] === 'q11' && pair[1] === 'c') { 
+                    score++;
+                }
+                if (pair[0] === 'q12' && pair[1] === 'b') { 
+                    score++;
+                }
+            }
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Your score: ' + score + ' out of 12!';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Course</title>
+	<link rel="stylesheet" href="styles2.css">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to the Phishing Awareness Course!</h1>
+		<p>Phishing awareness is essential for students attending college/university to protect themselves and their institutions from cyber threats.</p>
+		<p>Please select a module:</p>
+		<select id="moduleSelect">
+			<option value="">Select Module</option>
+			<option value="module1.html">Module 1: What is Phishing</option>
+			<option value="module2.html">Module 2: How to Spot a Phish</option>
+			<option value="module3.html">Module 3: Who Does This Affect</option>
+			<option value="module4.html">Module 4: Real World Examples</option>
+			<option value="final_quiz.html">Final Quiz</option>
+		</select>
+	</div>
+    <div id="content"></div>
+
+    <script>
+        document.getElementById('moduleSelect').addEventListener('change', function() {
+            var moduleUrl = this.value;
+            if (moduleUrl) {
+                window.location.href = moduleUrl;
+            }
+        });
+    </script>
+</body>
+</html>

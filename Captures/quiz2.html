@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+	<link rel="stylesheet" href="styles2.css">
+
+</head>
+<body>
+    <h1>Quiz 2: How to Spot a Phish!</h1>
+    <p>Please answer the following questions:</p>
+
+    <form id="quizForm">
+        <div>
+            <label for="q1">Which of the following is a common red flag in phishing emails?</label><br>
+            <input type="radio" name="q1" value="a"> Personalized greetings <br>
+            <input type="radio" name="q1" value="b"> Urgent requests for sensitive information  <br>
+            <input type="radio" name="q1" value="c"> Clear and concise language <br>
+            <input type="radio" name="q1" value="d"> Verified sender addresses<br>
+        </div>
+        <div>
+            <label for="q2">Question 2: What is a characteristic of a phishing website?</label><br>
+            <input type="radio" name="q2" value="a"> Secure HTTPS connection <br>
+            <input type="radio" name="q2" value="b"> Verified SSL certificate <br>
+            <input type="radio" name="q2" value="c"> Misspelled URL or domain <br>
+            <input type="radio" name="q2" value="d"> Trusted payment gateways <br>
+        </div>
+        <div>
+            <label for="q3">Question 3: What is a telltale sign of a phishing link?</label><br>
+            <input type="radio" name="q3" value="a"> Shortened URL <br>
+            <input type="radio" name="q3" value="b"> Long, descriptive URL <br>
+			<input type="radio" name="q3" value="c"> HTTPS protocol <br>
+            <input type="radio" name="q3" value="d"> Verified domain ownership <br>
+        </div>
+		<div>
+            <label for="q4">Question 4: What is email spoofing?</label><br>
+            <input type="radio" name="q4" value="a"> Sending emails to a large audience <br>
+            <input type="radio" name="q4" value="b"> Impersonating a legitimate sender's email address <br>
+            <input type="radio" name="q4" value="c"> Using encryption to secure email communications <br>
+            <input type="radio" name="q4" value="d"> Creating backups of email messages<br>
+        </div>
+		<div>
+            <label for="q5">Question 5: How can you verify the legitimacy of an email sender?</label><br>
+            <input type="radio" name="q5" value="a"> Trusting the display name <br>
+            <input type="radio" name="q5" value="b"> Checking the sender's email address <br>
+            <input type="radio" name="q5" value="c"> Clicking on links provided in the email <br>
+            <input type="radio" name="q5" value="d"> Ignoring email headers <br>
+        </div>
+		<div>
+            <label for="q6">Question 6: True or False: Phishing emails often contain grammatical errors and spelling mistakes.</label><br>
+            <input type="radio" name="q6" value="a"> True <br>
+            <input type="radio" name="q6" value="b"> False <br>
+        </div>
+		<div>
+            <label for="q7">Question 7: True or False: Legitimate companies will never ask for sensitive information via email.</label><br>
+            <input type="radio" name="q7" value="a"> True <br>
+            <input type="radio" name="q7" value="b"> False <br>
+        </div>
+		<div>
+            <label for="q8">Question 8: True or False: Hovering over a link in an email will reveal the true destination URL.</label><br>
+            <input type="radio" name="q8" value="a"> True <br>
+            <input type="radio" name="q8" value="b"> False <br>
+        </div>
+		<div>
+            <label for="q9">Question 9: True or False: Phishing emails usually come from unfamiliar or suspicious email addresses.</label><br>
+            <input type="radio" name="q9" value="a"> True <br>
+            <input type="radio" name="q9" value="b"> False <br>
+        </div>
+		<div>
+            <label for="q10">Question 10: True or False: Phishing websites may display fake security seals or logos to appear legitimate.</label><br>
+            <input type="radio" name="q10" value="a"> True <br>
+            <input type="radio" name="q10" value="b"> False <br>
+        </div>
+		<div>
+            <label for="q11">Question 11: True or False: It is safe to download email attachments as long as they have familiar file extensions like .doc or .pdf.</label><br>
+            <input type="radio" name="q11" value="a"> True<br>
+            <input type="radio" name="q11" value="b"> False<br>
+        </div>
+		<div>
+            <label for="q12">Question 12: True or False: Phishing attacks only occur through email communication.</label><br>
+            <input type="radio" name="q12" value="a"> True<br>
+            <input type="radio" name="q12" value="b"> False<br>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var score = 0;
+            for (var pair of formData.entries()) {
+                if (pair[0] === 'q1' && pair[1] === 'b') { // Question 1: Correct answer is 'b'
+                    score++;
+                }
+                if (pair[0] === 'q2' && pair[1] === 'c') { // Question 2: Correct answer is 'c'
+                    score++;
+                }
+                if (pair[0] === 'q3' && pair[1] === 'a') { 
+                    score++;
+                }
+                if (pair[0] === 'q4' && pair[1] === 'b') { 
+                    score++;
+                }
+				if (pair[0] === 'q5' && pair[1] === 'b') { 
+                }
+                if (pair[0] === 'q6' && pair[1] === 'a') { 
+                    score++;
+                }
+				if (pair[0] === 'q7' && pair[1] === 'a') { 
+                    score++;
+                }
+                if (pair[0] === 'q8' && pair[1] === 'a') { 
+                    score++;
+                }
+				if (pair[0] === 'q9' && pair[1] === 'a') {
+                    score++;
+                }
+                if (pair[0] === 'q10' && pair[1] === 'a') { 
+                    score++;
+                }
+				if (pair[0] === 'q11' && pair[1] === 'b') { 
+                    score++;
+                }
+                if (pair[0] === 'q12' && pair[1] === 'b') { 
+                    score++;
+                }
+            }
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Your score: ' + score + ' out of 12!';
+        });
+    </script>
+</body>
+</html>
